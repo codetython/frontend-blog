@@ -6,4 +6,4 @@ var moduleConfig = require('../config/module.config.js');
 var module = new moduleConfig(app.getName());
 // require services
 
-angular.module("MyApp.Base.Services", []);
+angular.module(module.getServices(), []);

@@ -1,7 +1,7 @@
 class ConfigApplication {
-  
+
   constructor(){
-    this.name = "MyApp";
+    this.name = "Codetython";
   };
 
   getName(){

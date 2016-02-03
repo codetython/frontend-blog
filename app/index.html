@@ -6,17 +6,27 @@
   <!-- build:css myapp.min.css -->
   <link rel="stylesheet" href="./_tmp/main.css">
   <!-- endbuild -->
+
+  <!-- build:vendor_css vendor.min.css -->
+  <link rel="stylesheet" href="./assets/vendor/foundation-sites/dist/foundation.min.css">
+  <!-- endbuild -->
 </head>
 <body>
   <div id="container">
     <div class="ui-view"></div>
   </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
 
   <!-- build:js myapp.min.js -->
   <script src="./_tmp/bundle.js"></script>
   <script src="./_tmp/templates.js"></script>
+  <!-- endbuild -->
+
+  <!-- build:js_vendor vendor.min.js -->
+  <script src="./assets/vendor/foundation-sites/dist/foundation.min.js"></script>
   <!-- endbuild -->
 </body>
 </html>

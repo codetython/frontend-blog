@@ -10,7 +10,7 @@ var app = new applicationConfig();
 var config = require('./config/module.config.js');
 var module = new config(app.getName());
 //
-angular.module('MyApp.Base', [
+angular.module(module.getModuleName(), [
   module.getControllers(),
   module.getServices(),
   module.getFilters()

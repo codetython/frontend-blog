@@ -2,10 +2,10 @@ class Config {
 
   constructor(app){
     this.app =  app;
-    this.module =  "Base";
+    this.module =  "Blog";
   }
 
-  getModuleApp () {
+  getModuleName () {
     return this.app + "." +this.module;
   }
 
@@ -24,7 +24,7 @@ class Config {
   getDirectives() {
     return this.app + "." + this.module + '.Directives';
   }
-  
+
 }
 
 export default Config;
