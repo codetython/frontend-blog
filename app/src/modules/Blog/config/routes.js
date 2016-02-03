@@ -3,18 +3,18 @@ module.exports = function($stateProvider, $urlRouterProvider){
   $urlRouterProvider.otherwise('/');
 
   $stateProvider
-    .state('base', {
-      templateUrl: '/src/modules/Blog/views/home.html'
+    .state('blog', {
+      templateUrl: '/src/modules/Blog/views/layout.html'
     })
-    .state('base.desc', {
+    .state('blog.home', {
       url: '/',
-      templateUrl: '/src/modules/Blog/views/desc.html',
+      templateUrl: '/src/modules/Blog/views/home.html',
       controller: 'BaseController',
       controllerAs: 'baseCtrl'
     })
-    .state('about', {
-      url: '/about',
-      templateUrl: '/src/modules/Blog/views/about.html'
+    .state('blog.contact', {
+      url: '/contato',
+      templateUrl: '/src/modules/Blog/views/contact.html'
     });
 
 
