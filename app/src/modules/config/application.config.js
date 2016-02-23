@@ -1,13 +1,12 @@
-class ConfigApplication {
+var ConfigApplication = function () {
+  var self = this;
+  self.name = "Codetython";
 
-  constructor(){
-    this.name = "Codetython";
-  };
+  self.getName = getName;
 
-  getName(){
-    return this.name;
-  };
+  function getName () {
+    return self.name;
+  }
+}
 
-};
-
-export default ConfigApplication;
+module.exports = ConfigApplication;

@@ -6,6 +6,7 @@ require('./modules/Blog/module.js');
 
 angular.module( app.getName(), [
   'ui.router',
+  'infinite-scroll',
   app.getName() + '.Blog'
 ]);
 

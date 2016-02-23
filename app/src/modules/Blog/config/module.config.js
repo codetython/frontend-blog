@@ -1,30 +1,35 @@
-class Config {
+var Config = function (app) {
+  var self = this;
 
-  constructor(app){
-    this.app =  app;
-    this.module =  "Blog";
+  self.app = app;
+  self.module = "Blog";
+
+  self.getModuleName = getModuleName;
+  self.getControllers = getControllers;
+  self.getServices = getServices;
+  self.getFilters = getFilters;
+  self.getDirectives = getDirectives;
+
+  function getModuleName () {
+    return self.app + "." +self.module;
   }
 
-  getModuleName () {
-    return this.app + "." +this.module;
+  function getControllers() {
+    return self.app + "." + self.module + '.Controllers';
   }
 
-  getControllers() {
-    return this.app + "." + this.module + '.Controllers';
+  function getServices() {
+    return self.app + "." + self.module + '.Services';
   }
 
-  getServices() {
-    return this.app + "." + this.module + '.Services';
+  function getFilters() {
+    return self.app + "." + self.module + '.Filters';
   }
 
-  getFilters() {
-    return this.app + "." + this.module + '.Filters';
-  }
-
-  getDirectives() {
-    return this.app + "." + this.module + '.Directives';
+  function getDirectives() {
+    return self.app + "." + self.module + '.Directives';
   }
 
 }
 
-export default Config;
+module.exports = Config;

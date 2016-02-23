@@ -1,11 +1,12 @@
-class BaseController {
-  constructor(){
-    this.name = "BaseController";
+var BaseController = function() {
+  var self = this;
+
+  self.name = "BaseController";
+
+  function getWelcome(){
+    return "Bem vindo ao module " + self.name + " !";
   }
 
-  getWelcome(){
-    return "Bem vindo ao module " + this.name + " !";
-  }
 }
 
-export default BaseController;
+module.exports =  BaseController;
